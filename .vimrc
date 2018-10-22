@@ -17,3 +17,17 @@ call plug#end()
 " OH MY GOD YOU CAN ELIMINATE SWAPFILES
 set nobackup
 set noswapfile
+
+" Enable the mouse
+set mouse=a
+
+" Misc visuals
+set nowrap
+set novisualbell
+set noerrorbells
+set background=dark
+
+" Show relative line numbers
+set number
+set relativenumber
+set numberwidth=4
