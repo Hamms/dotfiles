@@ -19,6 +19,7 @@ set nobackup
 set noswapfile
 
 " Enable the mouse
+set ttymouse=xterm2
 set mouse=a
 
 " Misc visuals
