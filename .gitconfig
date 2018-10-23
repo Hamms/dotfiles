@@ -11,6 +11,10 @@
     up = pull --rebase --autostash
     amend = commit --amend --no-edit
     edit = commit --amend
+    worddiff = diff --word-diff-regex=.
+
+    # recent-branches, courtesy of Brad Buchanan
+    rb = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
 
 [core]
     editor = vim
