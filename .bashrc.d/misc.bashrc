@@ -29,3 +29,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# AWS
+if [ -f $HOME/.aws_config ]; then
+  source $HOME/.aws_config
+fi
