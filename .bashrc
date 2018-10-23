@@ -8,6 +8,8 @@ case $- in
       *) return;;
 esac
 
-for file in ~/.bashrc.d/*.bashrc; do
+# All configurations are organized into .bashrc files in the .bashrc.d
+# directory
+for file in $HOME/.bashrc.d/*.bashrc; do
   source $file
 done

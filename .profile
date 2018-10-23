@@ -16,15 +16,15 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
+# Add user's private bin directories to PATH
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-# Ubuntu make installation of Ubuntu Make binary symlink
-PATH=/home/elijah/.local/share/umake/bin:$PATH
 
+# Ubuntu make installation of Ubuntu Make binary symlink
+if [ -d "$HOME/.local/share/umake/bin" ] ; then
+    PATH="$HOME/.local/share/umake/bin:$PATH"
+fi
