@@ -8,11 +8,17 @@ endif
 " Configure vim-plug
 call plug#begin('~/.vim/plugged')
 
-" Install plugins
+" Load plugins
+" Run :PlugInstall to install new plugins
 Plug 'scrooloose/nerdcommenter'
+Plug 'ap/vim-buftabline'
 
 " Initialize vim-plug
 call plug#end()
+
+" Configure buftabline plugin
+let g:buftabline_numbers = 1
+let g:buftabline_separators = 1
 
 " OH MY GOD YOU CAN ELIMINATE SWAPFILES
 set nobackup
@@ -29,6 +35,5 @@ set noerrorbells
 set background=dark
 
 " Show relative line numbers
-set number
 set relativenumber
 set numberwidth=4
