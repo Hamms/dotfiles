@@ -42,3 +42,11 @@ set background=dark
 " Show relative line numbers
 set relativenumber
 set numberwidth=4
+
+" Better-behaved tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smarttab
+set autoindent
