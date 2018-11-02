@@ -11,7 +11,12 @@ call plug#begin('~/.vim/plugged')
 " Load plugins
 " Run :PlugInstall to install new plugins
 Plug 'scrooloose/nerdcommenter'
+" Plug 'fholgado/minibufexpl.vim'
 Plug 'ap/vim-buftabline'
+Plug 'vim-syntastic/syntastic'
+" post install (yarn install | npm install) then load plugin only for editing supported files.
+" Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json'] }
 
 " Initialize vim-plug
 call plug#end()
