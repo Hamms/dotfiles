@@ -17,6 +17,7 @@ Plug 'vim-syntastic/syntastic'
 " post install (yarn install | npm install) then load plugin only for editing supported files.
 " Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json'] }
+Plug 'tpope/vim-surround'
 
 " Initialize vim-plug
 call plug#end()
