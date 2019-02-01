@@ -18,9 +18,15 @@ Plug 'vim-syntastic/syntastic'
 " Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json'] }
 Plug 'tpope/vim-surround'
+Plug 'tonchis/vim-to-github'
 
 " Initialize vim-plug
 call plug#end()
+
+syntax on
+let g:loaded_syntastic_cucumber_cucumber_checker=''
+let g:syntastic_javascript_checkers = ['eslint']
+filetype plugin on
 
 " Configure buftabline plugin
 let g:buftabline_numbers = 1
