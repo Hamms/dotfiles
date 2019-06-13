@@ -16,7 +16,7 @@ Plug 'ap/vim-buftabline'
 Plug 'vim-syntastic/syntastic'
 " post install (yarn install | npm install) then load plugin only for editing supported files.
 " Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json', 'markdown'] }
 Plug 'tpope/vim-surround'
 Plug 'tonchis/vim-to-github'
 
@@ -31,6 +31,16 @@ filetype plugin on
 " Configure buftabline plugin
 let g:buftabline_numbers = 1
 let g:buftabline_separators = 1
+
+" Configure vim-prettier plugin
+" The default settings for the plugin differ from prettier's defaults, so set
+" them back to match.
+" See https://github.com/prettier/vim-prettier#overwrite-default-prettier-configuration
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'false'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
 
 " OH MY GOD YOU CAN ELIMINATE SWAPFILES
 set nobackup
