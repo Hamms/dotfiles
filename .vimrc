@@ -19,6 +19,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json', 'markdown'] }
 Plug 'tpope/vim-surround'
 Plug 'tonchis/vim-to-github'
+Plug 'tell-k/vim-autopep8'
 
 " Initialize vim-plug
 call plug#end()
