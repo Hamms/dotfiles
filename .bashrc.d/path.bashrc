@@ -23,3 +23,8 @@ export PATH="./node_modules/.bin:$PATH"
 if [ -d "$HOME/.local/share/umake/bin" ] ; then
   export PATH="$HOME/.local/share/umake/bin:$PATH"
 fi
+
+# Rust
+if [ -d "$HOME/.cargo/bin" ] ; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
