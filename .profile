@@ -15,16 +15,3 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
-
-# Add user's private bin directories to PATH
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Ubuntu make installation of Ubuntu Make binary symlink
-if [ -d "$HOME/.local/share/umake/bin" ] ; then
-    PATH="$HOME/.local/share/umake/bin:$PATH"
-fi
