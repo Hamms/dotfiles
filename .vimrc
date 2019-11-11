@@ -68,3 +68,7 @@ set softtabstop=2
 set expandtab
 set smarttab
 set autoindent
+
+" Use bash-like tab completion
+set wildmode=longest,list,full
+set wildmenu
