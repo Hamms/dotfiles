@@ -72,3 +72,6 @@ set autoindent
 " Use bash-like tab completion
 set wildmode=longest,list,full
 set wildmenu
+
+" save commonly-used regexes here
+source ~/.regexlist.vim
