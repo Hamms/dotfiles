@@ -13,3 +13,6 @@ let jsImportToRequire = 's/^import \(\w*\) from \(.*\);$/const \1 = require(\2);
 
 " Ruby
 let rubyWrapPuts = 's/puts \(.*\)/puts "\1: #{\1.inspect}"/c'
+
+" HTML
+let htmlSpreadTag = 's/<[^>]*>/\r&\r/g'
