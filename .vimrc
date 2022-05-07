@@ -18,8 +18,10 @@ Plug 'vim-syntastic/syntastic'
 " Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json', 'markdown'] }
 Plug 'tpope/vim-surround'
-Plug 'tonchis/vim-to-github'
-Plug 'tell-k/vim-autopep8'
+Plug 'airblade/vim-gitgutter'
+"Plug 'ruby-formatter/rufo-vim'
+"Plug 'tonchis/vim-to-github'
+"Plug 'tell-k/vim-autopep8'
 
 " Initialize vim-plug
 call plug#end()
@@ -75,3 +77,10 @@ set wildmenu
 
 " save commonly-used regexes here
 source ~/.regexlist.vim
+
+" Adjust timeout lengths; see https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000
+set ttimeoutlen=1
+
+" Don't ever actually HIDE buftabline tabs
+highlight link BufTabLineActive BufTabLineHidden
