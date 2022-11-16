@@ -16,7 +16,8 @@ Plug 'ap/vim-buftabline'
 Plug 'vim-syntastic/syntastic'
 " post install (yarn install | npm install) then load plugin only for editing supported files.
 " Options include: 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json', 'markdown'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'json', 'markdown', 'vue'] }
+
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 "Plug 'ruby-formatter/rufo-vim'
@@ -77,6 +78,9 @@ set wildmenu
 
 " save commonly-used regexes here
 source ~/.regexlist.vim
+
+" support Vue files
+autocmd BufRead,BufNewFile *.vue setfiletype html
 
 " Adjust timeout lengths; see https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000
