@@ -13,3 +13,9 @@ esac
 for file in $HOME/.bashrc.d/*.bashrc; do
   source $file
 done
+
+# Explicitly do this last; enable tmux when safe.
+# From https://unix.stackexchange.com/a/113768
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
